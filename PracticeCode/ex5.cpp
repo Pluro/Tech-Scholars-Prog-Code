@@ -8,8 +8,8 @@ int boolIsPrime(int n){
         }
     }else{
         cout<< "number is not prime";
+		return 0;
     }
-    return 0;
 }
 
 int main(int argc, char const *argv[]) {
