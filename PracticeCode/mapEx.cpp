@@ -8,7 +8,7 @@ int main(){
 	mapOfWords.insert(std::make_pair("Apple",1));
 	mapOfWords.insert(std::make_pair("Orange",2));
 	mapOfWords["Pear"]=3;
-	mapOfWords["Apple"]=4;//pverwirte value
+	mapOfWords["Apple"]=4;//overwirte value
 
 	map<string, int>::iterator it = mapOfWords.begin();
 	while (it != mapOfWords.end()) {
