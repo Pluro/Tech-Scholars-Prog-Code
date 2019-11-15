@@ -1,6 +1,5 @@
 #include <iostream>
 #include<iomanip>
-#include <list>
 #include <fstream>
 #include <string.h>
 #include <map>
@@ -31,9 +30,9 @@ int main(){
 		++m[ptr];
 		ptr = strtok(NULL, delim);
 	}
+}
 	for (MapType::iterator iter = m.begin(); iter != m.end(); ++iter) {
 		cout << iter->first << " occurred " << iter->second << " times.\n";
 	}
-}
 return 0;
 }
