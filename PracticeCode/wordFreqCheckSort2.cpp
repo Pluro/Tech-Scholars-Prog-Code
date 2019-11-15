@@ -19,14 +19,15 @@ int main(){
 	}
 	string line;
 	MapType m;
-	while(getline(ifile, line)){
+	while(!ifile.eof()){
+		ifile >> line;
 		string cLine = line;
 		int len = cLine.length();
 		char str[cLine.length()];
 		for (int i = 0; i < len; i++) {
 			if(ispunct(cLine[i])){
 				cLine.erase(i--,1);
-				len = cLine.length();
+				len = cLine.length() ;
 			}
 			str[i] = cLine[i];
 		}
