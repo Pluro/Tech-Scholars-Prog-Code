@@ -29,6 +29,10 @@ int main(){
 				cLine.erase(i--,1);
 				len = cLine.length();
 			}
+			if (!isalpha(cLine[i])){
+				cLine.erase(i--,1);
+				len = cLine.length();
+			}
 			transform(cLine.begin(), cLine.end(), cLine.begin(), ::tolower);
 			str[i] = cLine[i];
 		}
