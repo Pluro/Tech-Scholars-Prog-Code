@@ -4,6 +4,7 @@
 #include <fstream>
 #include <string.h>
 #include <map>
+#include<bits/stdc++.h>
 #define FILENAME_MAX 301
 using namespace std;
 typedef map<string, int> MapType;
@@ -22,12 +23,13 @@ int main(){
 	while(getline(ifile, line)){
 		string cLine = line;
 		int len = cLine.length();
-		char str[cLine.length()];
+		char str[cLine.length()+1];
 		for (int i = 0; i < len; i++) {
 			if(ispunct(cLine[i])){
 				cLine.erase(i--,1);
 				len = cLine.length();
 			}
+			transform(cLine.begin(), cLine.end(), cLine.begin(), ::tolower);
 			str[i] = cLine[i];
 		}
 	char delim[] = " ";
