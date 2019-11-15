@@ -14,7 +14,6 @@ int main(){
 	while (it != mapOfWords.end()) {
 		cout<<it->first<<"::"<<it->second<<endl;
 		it++;
-		/* code */
 	}
 	if(mapOfWords.insert(make_pair("Apple",1)).second==false){
 		cout<<"Element whit key 'Apple' not inserted because already exists "<<endl;
