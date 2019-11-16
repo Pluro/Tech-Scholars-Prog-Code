@@ -23,10 +23,11 @@ int main(){
 		string cLine = line;
 		char str[cLine.length()];
 		for (size_t i = 0; i < sizeof(str); i++) {
-			str[i] = cLine[i];
-			if(ispunct(str[i++])==1){
-				str[i++] = str[i];
+			if(ispunct(str[i])==1){
+				cLine.erase(i);
+				str[cLine.length()];
 			}
+			str[i] = cLine[i];
 		}
 	char delim[] = " ";
 	char *ptr = strtok(str, delim);
@@ -34,9 +35,9 @@ int main(){
 		++m[ptr];
 		ptr = strtok(NULL, delim);
 	}
-	for (MapType::iterator iter = m.begin(); iter != m.end(); ++iter) {
-		cout << iter->first << " occurred " << iter->second << " times.\n";
-	}
+}
+for (MapType::iterator iter = m.begin(); iter != m.end(); ++iter) {
+	cout << iter->first << " occurred " << iter->second << " times.\n";
 }
 return 0;
 }
